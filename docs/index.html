@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>mimuz midi test</title>
+<script src="pomidi.js"></script>
+</head>
+<body>
+<div id="log"></div>
+<script type="module">
+const $log = document.querySelector("#log");
+
+let onOff = 0;
+
+const midi = await new pomidi();
+
+setInterval(async ()=>{
+  onOff ^= 1;
+  if(onOff == 1){
+    midi.sendNoteOn(1,10);
+  }else{
+    midi.sendNoteOff(1,10);
+  }
+},1000);
+
+</script>
+</body>
+</html>
