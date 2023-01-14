@@ -2,7 +2,7 @@
 
 ![mimuz-icon](https://mimuz.github.io/common/icon/png/mimuz-project.png)
 
-An Tiny library of USB MIDI for Deqing Sun's [Ch55xduino](https://github.com/DeqingSun/ch55xduino).
+A Very Tiny library of USB MIDI for Deqing Sun's [Ch55xduino](https://github.com/DeqingSun/ch55xduino).
 
 Support only 3 MIDI messages are :
 
