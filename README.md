@@ -2,7 +2,7 @@
 
 ![mimuz-icon](https://mimuz.github.io/common/icon/png/mimuz-project.png)
 
-A Very Tiny library of USB MIDI for Deqing Sun's [Ch55xduino](https://github.com/DeqingSun/ch55xduino).
+An Tiny library of USB MIDI for Deqing Sun's [Ch55xduino](https://github.com/DeqingSun/ch55xduino).
 
 Support only 3 MIDI messages are :
 
@@ -143,3 +143,18 @@ Write [midi-callback](./examples/midi-callback), connect the ch55x board with LE
 
 The LED should blink at intervals of approximately 1 second.
 
+## Reference Board Design (v0.1)
+
+mimuz-ch55x supports various CH55x boards, We made a reference board design for mimuz-ch55x as an example.
+
+### board preview
+
+![preview.png](./board/image/preview.png)    
+
+### schematics
+
+![schematics.png](./board/image/schematics.png)
+
+### Autodesk EAGLE data
+
+- [.sch / .brd](./board/eagle)
