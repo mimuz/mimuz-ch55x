@@ -157,4 +157,4 @@ mimuz-ch55x supports various CH55x boards, We made a reference board design for 
 
 ### Autodesk EAGLE data
 
-- [.sch / .brd](./board/eagle)
+- [Autodesk Eagle Data (.sch .brd .lbr)](./board/eagle)
