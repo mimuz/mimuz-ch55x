@@ -1,4 +1,4 @@
-# mi:muz for Ch55xduino
+# mi:muz:ch55x Tiny USB MIDI Library for Ch55xduino
 
 ![mimuz-icon](https://mimuz.github.io/common/icon/png/mimuz-project.png)
 
@@ -145,7 +145,7 @@ The LED should blink at intervals of approximately 1 second.
 
 ## Reference Board Design (v0.1)
 
-mimuz-ch55x supports various CH55x boards, We made a reference board design for mimuz-ch55x as an example.
+mimuz:ch55x supports various CH55x boards, We made a reference board design for mimuz-ch55x as an example.
 
 ### board preview
 
