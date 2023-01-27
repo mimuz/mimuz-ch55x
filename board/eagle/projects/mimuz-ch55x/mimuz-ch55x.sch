@@ -7865,8 +7865,8 @@ Source: AVX .. aphvc.pdf</description>
 <sheets>
 <sheet>
 <plain>
-<text x="55.88" y="152.4" size="7.62" layer="91" align="center">mi:muz-ch55x v0.1</text>
-<text x="55.88" y="144.78" size="2.54" layer="91" align="center">2023/01/21 by @tadfmac</text>
+<text x="55.88" y="152.4" size="7.62" layer="91" align="center">mi:muz-ch55x v1.0</text>
+<text x="55.88" y="144.78" size="2.54" layer="91" align="center">2023/01/27 by @tadfmac</text>
 </plain>
 <instances>
 <instance part="*" gate="G$1" x="10.16" y="86.36" smashed="yes"/>
