@@ -143,7 +143,7 @@ Write [midi-callback](./examples/midi-callback), connect the ch55x board with LE
 
 The LED should blink at intervals of approximately 1 second.
 
-## Reference Board Design (v0.1)
+## Reference Board Design (v1.0)
 
 mimuz:ch55x supports various CH55x boards, We made a reference board design for mimuz-ch55x as an example.
 
