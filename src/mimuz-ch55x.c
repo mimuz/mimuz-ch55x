@@ -315,6 +315,32 @@ void sendCtlChange(uint8_t ch, uint8_t num, uint8_t value){
   sendMidiMessage(sendBuffer,4);
 }
 
+void sendNRPN(uint8_t ch, uint16_t num, uint16_t value){
+    const uint8_t msb = 0x7f & (num >> 7);
+    const uint8_t lsb = 0x7f & num;
+    sendCtlChange(ch, NRPNLSB, lsb);
+    sendCtlChange(ch, NRPNMSB, msb);
+    msb = 0x7f & (value >> 7);
+    lsb = 0x7f & value;
+    sendCtlChange(ch, DataEntryMSB, valMsb);
+    sendCtlChange(ch, DataEntryLSB, valLsb);
+}
+
+void sendPitchbend(uint8_t ch, uint8_t bendvalue) {
+    // Calculate the two 7-bit values for the pitch bend message
+    uint16_t value = 8192 + bendvalue - 64; 
+    uint8_t lsb = value & 0x7F;  // Lower 7 bits
+    uint8_t msb = (value >> 7) & 0x7F;  // Upper 7 bits
+    
+    // Construct the MIDI message
+    uint8_t sendBuffer[4];  // Assuming sendBuffer is not already defined
+    sendBuffer[0] = 0xE0 | ch;  // Pitch bend message status byte with channel
+    sendBuffer[1] = lsb;   // Pitch bend LSB
+    sendBuffer[2] = msb;   // Pitch bend MSB
+    sendBuffer[3] = 0x00;  // Dummy byte (not used for pitch bend)
+    sendMidiMessage(sendBuffer,4);
+}
+
 void USB_EP3_IN(){
   UEP3_T_LEN = 0;                                             //The pre-used sending length must be cleared
   UEP3_CTRL = UEP3_CTRL & ~ MASK_UEP_T_RES | UEP_T_RES_NAK;   //NAK by default
