@@ -90,6 +90,7 @@ void USBInit(void);
 void sendNoteOn(uint8_t ch, uint8_t note, uint8_t vel);
 void sendNoteOff(uint8_t ch, uint8_t note);
 void sendCtlChange(uint8_t ch, uint8_t num, uint8_t value);
+void sendNRPN(uint8_t ch, uint16_t num, uint16_t value);
 void setHdlNoteOn(hdlMidiMessage);
 void setHdlNoteOff(hdlNoteOff);
 void setHdlCtlChange(hdlMidiMessage);

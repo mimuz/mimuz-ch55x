@@ -315,6 +315,17 @@ void sendCtlChange(uint8_t ch, uint8_t num, uint8_t value){
   sendMidiMessage(sendBuffer,4);
 }
 
+void sendNRPN(uint8_t ch, uint16_t num, uint16_t value){
+    const uint8_t msb = 0x7f & (num >> 7);
+    const uint8_t lsb = 0x7f & num;
+    sendCtlChange(ch, NRPNLSB, lsb);
+    sendCtlChange(ch, NRPNMSB, msb);
+    msb = 0x7f & (value >> 7);
+    lsb = 0x7f & value;
+    sendCtlChange(ch, DataEntryMSB, valMsb);
+    sendCtlChange(ch, DataEntryLSB, valLsb);
+}
+
 void USB_EP3_IN(){
   UEP3_T_LEN = 0;                                             //The pre-used sending length must be cleared
   UEP3_CTRL = UEP3_CTRL & ~ MASK_UEP_T_RES | UEP_T_RES_NAK;   //NAK by default
