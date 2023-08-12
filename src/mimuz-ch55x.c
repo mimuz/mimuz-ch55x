@@ -320,8 +320,8 @@ void sendNRPN(uint8_t ch, uint16_t num, uint16_t value){
     const uint8_t lsb = 0x7f & num;
     sendCtlChange(ch, NRPNLSB, lsb);
     sendCtlChange(ch, NRPNMSB, msb);
-    msb = 0x7f & (value >> 7);
-    lsb = 0x7f & value;
+    uint8_t valMsb = 0x7f & (value >> 7);
+    uint8_t valLsb = 0x7f & value;
     sendCtlChange(ch, DataEntryMSB, valMsb);
     sendCtlChange(ch, DataEntryLSB, valLsb);
 }
