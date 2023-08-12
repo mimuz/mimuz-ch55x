@@ -8,8 +8,8 @@ __code uint8_t DevDesc[] = {
     0x10,0x01, // USB Ver. 1.1
     0xEF,0x02,0x01,  // USB IAD (See. https://www.usb.org/sites/default/files/iadclasscode_r10.pdf)
     DEFAULT_ENDP0_SIZE, /* Define it in interface level */
-    0x09,0x12,0x01,0xDF, /* VID PID bString */
-    0x00,0x01,  // BCD Product (1.00)
+    0x09,0x12,0x03,0xDF, /* VID PID bString (see https://pid.codes/1209/DF03/)*/
+    0x12,0x00,  // BCD Product (0.12)
     0x01,       // iManufacturer (String Desc 1)
     0x02,       // iProduct (String Desc 2)
     0x03,       // iSerialNumber (String Desc 3)
@@ -133,7 +133,7 @@ __code uint8_t CfgDesc[] ={
     0x00,0x01,  // bcdADC = 0x0100
     0x09,0x00,  // wTotalLength = 0x0009 (9 bytes)
     0x01,       // bInCollection = 1
-    0x01,       // baInterfaceNr[1] = 1 (3?)
+    0x03,       // baInterfaceNr[1] = 3 ( 1->3 fixed 2023/08/12 )
 
     // MIDI interface descriptor (interface 3)
     0x09,       // bLength
