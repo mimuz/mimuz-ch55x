@@ -121,7 +121,7 @@ void USBSerial_flush(void){
   }
 }
 
-uint8_t USBSerial_write(char c){
+uint8_t USBSerial_write(__data char c){
   uint16_t waitWriteCount;
   if(controlLineState > 0){
     while(true){
